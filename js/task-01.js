@@ -1,13 +1,19 @@
 // console.log("hello)");
 
 // 1
-const amountCatRef = document.querySelectorAll('li.item');
-// console.log(amountCatRef.length);
-const amountCatRefLeng = amountCatRef.length;
-console.log(`В списке ${amountCatRefLeng} категории`);
+// const amountCatRef = document.querySelectorAll('li.item');
+// // console.log(amountCatRef.length);
+// const amountCatRefLeng = amountCatRef.length;
+// console.log(`В списке ${amountCatRefLeng} категории`);
+
+//1.1
+const categorRef = document.querySelector('#categories');
+// console.log(categorRef.children.length);
+const amountCat = categorRef.children.length;
+console.log(`В списке ${amountCat} категории`);
 
 
-// //2
+//2
 const itemRef = document.querySelectorAll('li.item');
 // // console.log(itemRef[0]);
 
@@ -30,4 +36,3 @@ console.log(`Категория: ${titelThirdRef.textContent}`);
 
 const itemThird = itemRef[2].querySelectorAll('li');
 console.log(`Количество элементов: ${itemThird.length}`);
-

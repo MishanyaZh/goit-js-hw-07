@@ -14,11 +14,11 @@ const ingredientsRef = document.querySelector('#ingredients');
 const elements = ingredients.map(ingredient => {
     const ingrEl = document.createElement('li');
     ingrEl.textContent = ingredient;
-   // console.log(ingrEl);
+   console.log(ingrEl);
 
     return ingrEl;
 });
 
 ingredientsRef.append(...elements);
-//console.log(ingredientsRef);
+console.log(ingredientsRef);
 
