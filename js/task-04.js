@@ -1,31 +1,29 @@
 
 const counterContainer = document.getElementById('counter');
-console.dir(counterContainer);
+//console.log(counterContainer);
 
 const decrementButton = counterContainer.children[0];
-console.log(decrementButton);
+//console.log(decrementButton);
 
-const valueCount = counterContainer.children[1];
-console.dir(valueCount);
-
+const valueTextContent = counterContainer.children[1];
+//console.log(valueTextContent);
 
 const incrementButton = counterContainer.children[2];
-console.log(incrementButton);
+//console.log(incrementButton);
 
 
-
+let counterValue = 0;
 
 decrementButton.addEventListener('click', event => {
-    
-console.log('-clik');
+    counterValue -= 1;
+    valueTextContent.textContent = counterValue;
+    //console.log('-clik');
 });
 
 
 incrementButton.addEventListener('click', event => {
-
-    valueCount.textContent += 1;
-    // for (let i = 0; i <valueCount; i+1) {
-    //     valueCount=[i]; 
-    // }
-   console.log('+clik'); 
+    counterValue += 1;
+    valueTextContent.textContent = counterValue;
+    //console.log(counterValue);
+    //console.log('+clik'); 
 });
