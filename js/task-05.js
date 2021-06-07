@@ -15,5 +15,9 @@ refs.inputRef.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
     console.log(event.currentTarget.value);
+    //update (не реализовано https://prnt.sc/14i8ixk)
+    if (event.currentTarget.value === '') {
+        refs.outputRef.textContent = 'незнакомец'
+    } else 
     refs.outputRef.textContent = event.currentTarget.value;
 }

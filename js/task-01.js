@@ -11,13 +11,21 @@ const totalAraysCategories = categorRef.children;
 // console.log(totalAraysCategories);
 const categories = [...totalAraysCategories];
     
-categories.map(cat => {
+//update 3.0 (В задании 1 вам не нужно возвращать новый массив, поэтому отлично подошел бы метод forEach)
+
+categories.forEach(cat => {
     console.log(`Категория: ${cat.children[0].textContent}`);
     console.log(`Количество элементов: ${cat.children[1].children.length}`);
 });
 
 
 
+
+//version 2.0
+// categories.map(cat => {
+//     console.log(`Категория: ${cat.children[0].textContent}`);
+//     console.log(`Количество элементов: ${cat.children[1].children.length}`);
+// });
 
 
 //old version

@@ -17,26 +17,24 @@ const images = [
 const galleryRef = document.querySelector('#gallery');
 // console.log(galleryRef);
 
-//1.map
+//(тут вы добавляете по одному ли, а ваша задача - сгенерировать полностьюж всю разметку и добавить ее за одну операцию вставки)
 
-// images.map(image => {
-//   galleryRef.insertAdjacentHTML('afterbegin', `<li><img src= ${image.url} alt= '${image.alt}'></li>`
-//   );
-//   //console.log(galleryRef);
-// });
-
-// // console.log(galleryRef);
-
-
-//2.forEach
+let arrEllements = [];
+//forEach
 images.forEach(image => {
-  galleryRef.insertAdjacentHTML('afterbegin', `<li><img src= ${image.url} alt= '${image.alt}' width= 360, height =240></li>`
-  );
-  //console.log(galleryRef);
-  
+  //old
+  // galleryRef.insertAdjacentHTML('afterbegin', `<li><img src= ${image.url} alt= '${image.alt}' width= 360, height =240></li>`
+  // );
+
+  //update
+  arrEllements.push(`<li><img src= ${image.url} alt= '${image.alt}' width= 360, height =240></li>`)
+
 });
 
+galleryRef.insertAdjacentHTML('beforeend', [...arrEllements].join(''));
+
 console.log(galleryRef);
+
 
 
 
