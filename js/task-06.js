@@ -29,6 +29,9 @@ function inputBlur(event) {
 
     if (value.length < inputRef.dataset.length || value.length > inputRef.dataset.length) {
         event.currentTarget.classList.add('invalid');
+        if (event.currentTarget.classList.contains('valid')) {
+            event.currentTarget.classList.replace('valid','invalid');
+        }
     }
     else { event.currentTarget.classList.add('valid');
         if (event.currentTarget.classList.contains('invalid')) {
